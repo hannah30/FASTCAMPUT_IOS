@@ -9,15 +9,13 @@
 import Foundation
 
 class SubjectCalculation {
-  
-
-  //과목의 총점을 구하는 함수
-  
-  
-  //과목의 학점을 구하는 함수
+  var averageStudent: Int = 0
+  var averageSubject: Int = 0
   
   //학생의 평균을 구하는 함수
+  func (name: String) -> Int {
   
+  }
   //학점의 평균을 구하는 함수
   
   
