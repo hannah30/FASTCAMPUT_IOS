@@ -1,7 +1,7 @@
 # Ios School 5기
 ## 스쿨 수업 예제 관리
  
-* [MyCalculator] (https://github.com/hannah30/project/tree/master/project/MyCalculator)
+* [MyCalculator](https://github.com/hannah30/project/tree/master/project/MyCalculator)
 계산기 만들기 예제 앱
 
 * [은행 송금](https://github.com/hannah30/FASTCAMPUT_IOS/tree/master/project/bank)

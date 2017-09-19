@@ -28,21 +28,22 @@ class ViewController: UIViewController {
   }
 //차 구입버튼을 누를때마다 allMoney의 금액은 차감이 됨
   @IBAction func buyCar(buyCarBtn: UIButton) {
-    if buyCarBtn.tag == 1 && allMoney > 0 {
+    if buyCarBtn.tag == 1 && allMoney > 999 {
       allMoney -= 1000
       moneyDisplayLB.text = String(allMoney) + "원"
       buyMetionLB.text = "카니발을 구매하셨습니다."
-    }else if buyCarBtn.tag == 2 && allMoney > 0{
+    }else if buyCarBtn.tag == 2 && allMoney > 4999{
       allMoney -= 5000
       moneyDisplayLB.text = String(allMoney) + "원"
       buyMetionLB.text = "렌지로버를 구매하셨습니다."
-    }else if buyCarBtn.tag == 3 && allMoney > 0 {
+    }else if buyCarBtn.tag == 3 && allMoney > 3999 {
       allMoney -= 4000
       moneyDisplayLB.text = String(allMoney) + "원"
       buyMetionLB.text = "오딧세이를 구매하셨습니다."
-    }else if allMoney <= 0 {
-      moneyDisplayLB.text = "돈을 먼저 지불해 주세요"
+    }else if allMoney >= 0 {
+      moneyDisplayLB.text = "잔액이 부족합니다"
     }
+    moneyDisplayLB.textColor = UIColor.orange
   }
   
   //버튼이 클릭될때마다 버튼에 해당하는 값을 더해주고 moneyDisplay에 표시되는 금액 표시를 합계금액으로 해줌
@@ -59,11 +60,15 @@ class ViewController: UIViewController {
       moneyDisplayLB.text = String(allMoney) + "원"
     }
   }
-  //차 구매 버튼이 클릭될때마다 구매한 차이름과 갯수가 표현됨
+  //allmoney에 , 추가해보기
+  func comma (addComma: Int) -> String {
+    allMoney
+    return
+  }
   
   
-// 잔액이 부족한데 왜 구매가 될까...
-// label에 텍스트 컬러를 변경하려면 어떻게 해야하는지?
+// 잔액이 부족한데 왜 구매가 될까... allmoney의 값을 단순히 0보다 크다가 아니고 구매금액에 근접하게 하니 수정
+// label에 텍스트 컬러를 변경하려면 어떻게 해야하는지? textColor로 해결
   
 }
 
