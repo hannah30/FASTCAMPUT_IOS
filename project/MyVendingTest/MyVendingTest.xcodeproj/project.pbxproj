@@ -15,6 +15,8 @@
 		BA1649D41F6F53BF006576BD /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA1649D11F6F53BF006576BD /* 4.jpg */; };
 		BA1649D51F6F53BF006576BD /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA1649D21F6F53BF006576BD /* 3.jpg */; };
 		BA1649D61F6F53BF006576BD /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BA1649D31F6F53BF006576BD /* 2.jpg */; };
+		BA7328A21F7103B40066773D /* CarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7328A11F7103B40066773D /* CarType.swift */; };
+		BA7328A41F7104420066773D /* AddMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA7328A31F7104420066773D /* AddMoney.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		BA1649D11F6F53BF006576BD /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
 		BA1649D21F6F53BF006576BD /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
 		BA1649D31F6F53BF006576BD /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		BA7328A11F7103B40066773D /* CarType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarType.swift; sourceTree = "<group>"; };
+		BA7328A31F7104420066773D /* AddMoney.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddMoney.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 			children = (
 				BA1649BF1F6F5392006576BD /* AppDelegate.swift */,
 				BA1649C11F6F5393006576BD /* ViewController.swift */,
+				BA7328A11F7103B40066773D /* CarType.swift */,
+				BA7328A31F7104420066773D /* AddMoney.swift */,
 				BA1649C31F6F5393006576BD /* Main.storyboard */,
 				BA1649C61F6F5393006576BD /* Assets.xcassets */,
 				BA1649D11F6F53BF006576BD /* 4.jpg */,
@@ -148,7 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA7328A21F7103B40066773D /* CarType.swift in Sources */,
 				BA1649C21F6F5393006576BD /* ViewController.swift in Sources */,
+				BA7328A41F7104420066773D /* AddMoney.swift in Sources */,
 				BA1649C01F6F5392006576BD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -311,6 +319,7 @@
 				BA1649D01F6F5393006576BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

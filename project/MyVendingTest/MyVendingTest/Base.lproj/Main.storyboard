@@ -64,10 +64,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iW-Cu-R7B">
-                                        <rect key="frame" x="204" y="98" width="52" height="30"/>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iW-Cu-R7B">
+                                        <rect key="frame" x="204" y="94" width="90" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="구입하기"/>
+                                        <state key="normal" title="카니발구입"/>
                                         <connections>
                                             <action selector="buyCarWithBuyCarBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="080-g1-k3H"/>
                                         </connections>
@@ -104,10 +104,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zc5-tA-8TR">
-                                        <rect key="frame" x="204" y="90" width="52" height="30"/>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zc5-tA-8TR">
+                                        <rect key="frame" x="204" y="90" width="90" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="구입하기"/>
+                                        <state key="normal" title="오딧세이구입"/>
                                         <connections>
                                             <action selector="buyCarWithBuyCarBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gFW-84-VVM"/>
                                         </connections>
@@ -144,10 +144,10 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbW-dB-El0">
-                                        <rect key="frame" x="204" y="95" width="52" height="30"/>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbW-dB-El0">
+                                        <rect key="frame" x="204" y="95" width="90" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="구입하기"/>
+                                        <state key="normal" title="렌지로버구입"/>
                                         <connections>
                                             <action selector="buyCarWithBuyCarBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KJ9-vP-jtY"/>
                                         </connections>
@@ -160,36 +160,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pIF-1T-dpC">
-                                        <rect key="frame" x="31" y="117" width="80" height="30"/>
+                                        <rect key="frame" x="31" y="114" width="80" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="5,000">
+                                        <state key="normal" title="오천원">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="myMoneyWithAddMoneyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="D06-yl-mR4"/>
+                                            <action selector="myMoneyWithAddMoneyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JqC-fb-OR7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mEz-Hz-rte">
-                                        <rect key="frame" x="148" y="117" width="80" height="30"/>
+                                        <rect key="frame" x="148" y="114" width="80" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="2,000">
+                                        <state key="normal" title="이천원">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="myMoneyWithAddMoneyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aTY-yK-hbX"/>
+                                            <action selector="myMoneyWithAddMoneyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MTQ-4P-Qsq"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dp1-pk-aXs">
-                                        <rect key="frame" x="260" y="117" width="80" height="30"/>
+                                        <rect key="frame" x="260" y="114" width="80" height="36"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="1,000">
+                                        <state key="normal" title="천원">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </state>
                                         <connections>
-                                            <action selector="myMoneyWithAddMoneyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xi5-JG-zXp"/>
+                                            <action selector="myMoneyWithAddMoneyBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="trv-ZO-xAg"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="    현재 금액 : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSN-yg-zfv">
