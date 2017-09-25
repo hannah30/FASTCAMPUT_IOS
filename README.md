@@ -10,4 +10,5 @@ class를 활용해보기 위해 간단히 작성해 봄
 
 * [자판기 만들기](https://github.com/hannah30/FASTCAMPUT_IOS/tree/master/project/MyVendingTest)
 자판기를 통해 실제 물건을 구매하고 돈을 지불하는 실습 앱
-![자판기이미지](img/vending.png)
+
+* [baseBall게임](https://github.com/hannah30/FASTCAMPUT_IOS/tree/master/project/BaseballGame) 임의의 숫자를 3자리 생성하고 그 숫자를 맞추는 간단한 게임
