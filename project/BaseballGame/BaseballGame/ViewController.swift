@@ -24,6 +24,7 @@ class ViewController: UIViewController {
   //start버튼을 눌러서 게임이 실행중일때임을 체크하기 위한 변수
   private var isRunning: Bool = false
   private var randomNumList: [Int] = []
+  let computer: Computer = Computer()
   
   
   override func viewDidLoad() {
@@ -44,7 +45,7 @@ class ViewController: UIViewController {
     //스타트버튼을 누르면 항상 값은 초기값이 되어야 하니까 여기서 해주는게 좋다
     clear()
     //스타트버튼을 누르면 정답이 될 랜덤 숫자를 만든다
-    randomNumList = makeNumRandom()
+    randomNumList = computer.makeNumRandom()
     //택스트뷰도 초기화 해줌 새로운 문제가 시작되니까.
     textDisplayView.text = ""
     //정답이 뭔지 보기위해 찍어봄
@@ -54,7 +55,7 @@ class ViewController: UIViewController {
   @IBAction func checkBtn(_ sender: UIButton) {
     //다시 해보기
     if isRunning && startBtnList.count == randomNumList.count {
-      let score = numCheck(answer: startBtnList, currectAnswer: randomNumList)
+      let score = computer.numCheck(answer: startBtnList, currectAnswer: randomNumList)
       if score == "3S" {
         resultLB.text = "정답👍👏"
         isRunning = false
@@ -132,16 +133,8 @@ class ViewController: UIViewController {
   
   //MARK: Method
   //임의의 세자리 숫자를 만드는 method
-  private func makeNumRandom() -> [Int] {
-    var randomNumList:[Int] = []
-    while randomNumList.count < 3 {
-      let randomNum: Int = Int(arc4random_uniform(10))
-      if !randomNumList.contains(randomNum) {
-        randomNumList.append(randomNum)
-      }
-    }
-    return randomNumList
-  }
+  //class로 빼줌
+  
   //내가 해본 것
   //  //textview에 display하기 위해 startBtnList의 숫자들을 string으로 바꿔줌
   //  private func makeNumString() -> String {
@@ -152,37 +145,7 @@ class ViewController: UIViewController {
   //    return startStr
   //  }
   //  내가 해본 것 끝
-  private func numCheck(answer:[Int], currectAnswer:[Int]) -> String {
-    var ball: Int = 0
-    var strike: Int = 0
-    var out: Int = 0
-    for count in 0..<answer.count {
-      let ansewrNum = answer[count]
-      if currectAnswer.contains(ansewrNum){
-        if currectAnswer[count] == ansewrNum {
-          strike += 1
-        }else {
-          ball += 1
-        }
-      }else {
-        out += 1
-      }
-    }
     
-    //체크 결과를 스트링으로 만들어 주기
-    var resultString: String = ""
-    if strike > 0 {
-      resultString += "\(strike)S"
-    }
-    if ball > 0 {
-      resultString += "\(ball)B"
-    }
-    if out > 0 {
-      resultString += "\(out)O"
-    }
-    return resultString
-  }
-  
   private func clear(){
     startBtnList = []
     guard let startBtnLBList = startBtnLBList else{return}

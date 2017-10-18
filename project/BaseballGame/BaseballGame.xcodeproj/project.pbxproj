@@ -12,6 +12,7 @@
 		BA27B4E61F73463E009680D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA27B4E41F73463E009680D3 /* Main.storyboard */; };
 		BA27B4E81F73463E009680D3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA27B4E71F73463E009680D3 /* Assets.xcassets */; };
 		BA27B4EB1F73463E009680D3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA27B4E91F73463E009680D3 /* LaunchScreen.storyboard */; };
+		BA8825221F7890DB008B27C0 /* Computer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA8825211F7890DB008B27C0 /* Computer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		BA27B4E71F73463E009680D3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA27B4EA1F73463E009680D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA27B4EC1F73463E009680D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA8825211F7890DB008B27C0 /* Computer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Computer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				BA27B4E01F73463E009680D3 /* AppDelegate.swift */,
 				BA27B4E21F73463E009680D3 /* ViewController.swift */,
+				BA8825211F7890DB008B27C0 /* Computer.swift */,
 				BA27B4E41F73463E009680D3 /* Main.storyboard */,
 				BA27B4E71F73463E009680D3 /* Assets.xcassets */,
 				BA27B4E91F73463E009680D3 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA8825221F7890DB008B27C0 /* Computer.swift in Sources */,
 				BA27B4E31F73463E009680D3 /* ViewController.swift in Sources */,
 				BA27B4E11F73463E009680D3 /* AppDelegate.swift in Sources */,
 			);
@@ -299,6 +303,7 @@
 				BA27B4F11F73463E009680D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
