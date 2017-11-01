@@ -12,16 +12,19 @@ class CollectionViewController: UIViewController {
   @IBOutlet weak var musicProgress: UIProgressView!
   @IBOutlet weak var currentPlayTimeLabel: UILabel!
   @IBOutlet weak var durationPlayTimeBtn: UILabel!
+ 
+  @IBOutlet weak var playBtn: UIButton!
   
-  lazy var songData : MainManager = MainManager()
   
-  var player: AVAudioPlayer?
+  lazy var songData : MusicDataManager = MusicDataManager()
+  
+  var player: AVPlayer = AVPlayer()
  
   var currentIndex : Int = 0 {
     willSet{
-      let selectedData = songData.audioManager[newValue]
+      let selectedData = songData.songDatas[newValue]
       self.titleNameLabel.text = selectedData.title
-      self.singerNameLabel.text = selectedData.singer
+      self.singerNameLabel.text = selectedData.artistName
     }
   }
  
@@ -32,48 +35,98 @@ class CollectionViewController: UIViewController {
   override func viewDidLoad() {
         super.viewDidLoad()
 
+//gesture
+    let gesture = UIGestureRecognizer(target: self, action: #selector(self.tapOnAlbumCover(_:)))
+    audioColloectionView.addGestureRecognizer(gesture)
+    
     audioColloectionView.isPagingEnabled = true
 //    let selectedData = songData.audioManager[currentIndex]
-    self.titleNameLabel.text = songData.audioManager[0].title
-    self.singerNameLabel.text = songData.audioManager[0].singer
+    
+    titleNameLabel.text = songData.songDatas[0].title
+    singerNameLabel.text = songData.songDatas[0].artistName
 
   }
-  @IBAction func didTabPlayBtn(_ sender: UIButton) {
-    
-    sender.isSelected = !sender.isSelected
 
-//    let selected = sender.isSelected
-//    let deselected = !sender.isSelected
+  @IBAction func didTabPlayButton(_ sender: UIButton) {
+//    sender.isSelected = !sender.isSelected
     
-    if sender.isSelected {
+    //    let selected = sender.isSelected
+    //    let deselected = !sender.isSelected
+    
+//    if sender.isSelected {
       let visibleCell = audioColloectionView.visibleCells.first!
       let indexPathOfVisibleCell = audioColloectionView.indexPath(for: visibleCell)!
-      titleNameLabel.text = songData.audioManager[indexPathOfVisibleCell.item].title
-      singerNameLabel.text = songData.audioManager[indexPathOfVisibleCell.item].singer
+      titleNameLabel.text = songData.songDatas[indexPathOfVisibleCell.item].title
+      singerNameLabel.text = songData.songDatas[indexPathOfVisibleCell.item].artistName
       
-      player = try! AVAudioPlayer(contentsOf: songData.audioManager[indexPathOfVisibleCell.item].url!)
-      player?.play()
-      
-//      let secondPlayTime = String(format: "%.1f", player!.duration)
-      currentPlayTimeLabel.text = "\(String(player!.currentTime))"
-      durationPlayTimeBtn.text = "\(String(format: "%.1f", player!.duration))"
-//      Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: <#T##Selector#>, userInfo: <#T##Any?#>, repeats: true)
-      
-    } else {
-      player?.pause()
+      let selectedData = songData.songDatas[currentIndex]
+    if let urlPath = Bundle.main.url(forResource: selectedData.songUrl, withExtension: "mp3")
+    {
+      let asset = AVAsset(url: urlPath)
+      let playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: nil)
+      player.replaceCurrentItem(with: playerItem)
+      player.play()
     }
+        
+//      }
+      
+      //      let secondPlayTime = String(format: "%.1f", player!.duration)
+      //      currentPlayTimeLabel.text = "\(String(player!.currentTime))"
+      //      durationPlayTimeBtn.text = "\(String(format: "%.1f", player!.duration))"
+      //      Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: <#T##Selector#>, userInfo: <#T##Any?#>, repeats: true)
+      
+//    } else {
+//      player.pause()
+//    }
+        
+//
     
+  
   }
+
+//  @IBAction func didTabLongPress(_ sender: Any) {
+//    let stopBtn = UIImage(named: "btn_del")
+//    playBtn.setImage(stopBtn, for: .normal)
+//    player.rate = 0.0
+//    player.pause()
+//  }
+
+  @objc func tapOnAlbumCover(_ sender: UIGestureRecognizer) {
+    let lyricsView = UIView()
+    lyricsView.frame = CGRect(x: 0, y: 20, width: audioColloectionView.frame.size.width, height: audioColloectionView.frame.size.height)
+    lyricsView.backgroundColor = UIColor.lightGray
+    lyricsView.alpha = 0.7
+    audioColloectionView.addSubview(lyricsView)
+  }
+
   
   @IBAction func didTabPreBtn(_ sender: UIButton) {
-    if !(currentIndex == 0) {
-      currentIndex + 1
+    if currentIndex != 0 {
+      currentIndex -= 1
+      let selectedData = songData.songDatas[currentIndex]
+      if let urlPath = Bundle.main.url(forResource: selectedData.songUrl, withExtension: "mp3")
+      {
+        let asset = AVAsset(url: urlPath)
+        let playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: nil)
+        player.replaceCurrentItem(with: playerItem)
+        player.play()
+      }
     }
+
   }
   
   @IBAction func didTabNextBtn(_ sender: UIButton) {
-    
-  }
+    currentIndex += 1
+    let selectedData = songData.songDatas[currentIndex]
+    if let urlPath = Bundle.main.url(forResource: selectedData.songUrl, withExtension: "mp3")
+    {
+      let asset = AVAsset(url: urlPath)
+      let playerItem = AVPlayerItem(asset: asset, automaticallyLoadedAssetKeys: nil)
+      player.replaceCurrentItem(with: playerItem)
+      player.play()
+    }
+    }
+  
   
   
     override func didReceiveMemoryWarning() {
@@ -83,7 +136,7 @@ class CollectionViewController: UIViewController {
     
 
 
-}
+  }
 
 func progressStart() {
 
@@ -93,12 +146,12 @@ func progressStart() {
 extension CollectionViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return songData.audioManager.count
+    return songData.songDatas.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TitleCover", for: indexPath) as! CustomCollectionViewCell
-    cell.titleImg.image = songData.audioManager[indexPath.item].titleImg
+    cell.titleImg.image = songData.songDatas[indexPath.item].artworkImg
     return cell
   }
   

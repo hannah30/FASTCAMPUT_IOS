@@ -38,14 +38,14 @@
 		BA196E171FA1B12000F1F6F7 /* 7.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA196DF91FA1B12000F1F6F7 /* 7.mp3 */; };
 		BA196E181FA1B12000F1F6F7 /* 8.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA196DFA1FA1B12000F1F6F7 /* 8.mp3 */; };
 		BA196E191FA1B12000F1F6F7 /* 9.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BA196DFB1FA1B12000F1F6F7 /* 9.mp3 */; };
-		BA196E1B1FA1B73400F1F6F7 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA196E1A1FA1B73400F1F6F7 /* AudioManager.swift */; };
-		BA196E1D1FA1C27300F1F6F7 /* MainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA196E1C1FA1C27300F1F6F7 /* MainManager.swift */; };
+		BA196E1B1FA1B73400F1F6F7 /* SongDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA196E1A1FA1B73400F1F6F7 /* SongDataModel.swift */; };
 		BA196E3F1FA1EF3700F1F6F7 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA196E3E1FA1EF3700F1F6F7 /* CustomCollectionViewCell.swift */; };
 		BA196EA11FA3100C00F1F6F7 /* CoverFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA196EA01FA3100C00F1F6F7 /* CoverFlowLayout.swift */; };
 		BA3023E41FA18B2A00884FF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3023E31FA18B2A00884FF0 /* AppDelegate.swift */; };
 		BA3023E91FA18B2A00884FF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3023E71FA18B2A00884FF0 /* Main.storyboard */; };
 		BA3023EB1FA18B2A00884FF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA3023EA1FA18B2A00884FF0 /* Assets.xcassets */; };
 		BA3023EE1FA18B2A00884FF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA3023EC1FA18B2A00884FF0 /* LaunchScreen.storyboard */; };
+		BA61F6401FA741F6000DC86E /* MusicDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA61F63F1FA741F6000DC86E /* MusicDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,8 +80,7 @@
 		BA196DF91FA1B12000F1F6F7 /* 7.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 7.mp3; sourceTree = "<group>"; };
 		BA196DFA1FA1B12000F1F6F7 /* 8.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 8.mp3; sourceTree = "<group>"; };
 		BA196DFB1FA1B12000F1F6F7 /* 9.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 9.mp3; sourceTree = "<group>"; };
-		BA196E1A1FA1B73400F1F6F7 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		BA196E1C1FA1C27300F1F6F7 /* MainManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainManager.swift; sourceTree = "<group>"; };
+		BA196E1A1FA1B73400F1F6F7 /* SongDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongDataModel.swift; sourceTree = "<group>"; };
 		BA196E3E1FA1EF3700F1F6F7 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		BA196EA01FA3100C00F1F6F7 /* CoverFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoverFlowLayout.swift; sourceTree = "<group>"; };
 		BA3023E01FA18B2A00884FF0 /* CollectionViewAudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewAudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +89,7 @@
 		BA3023EA1FA18B2A00884FF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA3023ED1FA18B2A00884FF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA3023EF1FA18B2A00884FF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA61F63F1FA741F6000DC86E /* MusicDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicDataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,8 +162,8 @@
 				BA3023E31FA18B2A00884FF0 /* AppDelegate.swift */,
 				BA196DD91FA1A96700F1F6F7 /* CollectionViewController.swift */,
 				BA196E3E1FA1EF3700F1F6F7 /* CustomCollectionViewCell.swift */,
-				BA196E1A1FA1B73400F1F6F7 /* AudioManager.swift */,
-				BA196E1C1FA1C27300F1F6F7 /* MainManager.swift */,
+				BA196E1A1FA1B73400F1F6F7 /* SongDataModel.swift */,
+				BA61F63F1FA741F6000DC86E /* MusicDataManager.swift */,
 				BA196EA01FA3100C00F1F6F7 /* CoverFlowLayout.swift */,
 				BA196DDD1FA1B12000F1F6F7 /* Song */,
 				BA3023E71FA18B2A00884FF0 /* Main.storyboard */,
@@ -279,8 +279,8 @@
 				BA196DDA1FA1A96700F1F6F7 /* CollectionViewController.swift in Sources */,
 				BA196EA11FA3100C00F1F6F7 /* CoverFlowLayout.swift in Sources */,
 				BA196E3F1FA1EF3700F1F6F7 /* CustomCollectionViewCell.swift in Sources */,
-				BA196E1B1FA1B73400F1F6F7 /* AudioManager.swift in Sources */,
-				BA196E1D1FA1C27300F1F6F7 /* MainManager.swift in Sources */,
+				BA61F6401FA741F6000DC86E /* MusicDataManager.swift in Sources */,
+				BA196E1B1FA1B73400F1F6F7 /* SongDataModel.swift in Sources */,
 				BA3023E41FA18B2A00884FF0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,6 +419,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2M85THSX7L;
 				INFOPLIST_FILE = CollectionViewAudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jscschool.CollectionViewAudio;
@@ -433,6 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2M85THSX7L;
 				INFOPLIST_FILE = CollectionViewAudio/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jscschool.CollectionViewAudio;

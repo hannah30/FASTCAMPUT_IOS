@@ -38,6 +38,10 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Album Cover" translatesAutoresizingMaskIntoConstraints="NO" id="sXG-PX-c2X">
                                                     <rect key="frame" x="0.0" y="0.0" width="372" height="358"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <gestureRecognizers/>
+                                                    <connections>
+                                                        <outletCollection property="gestureRecognizers" destination="B09-dO-1y6" appends="YES" id="0Xe-KX-YlN"/>
+                                                    </connections>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -80,8 +84,7 @@
                                                         <rect key="frame" x="3.5" y="11.5" width="38" height="22"/>
                                                         <state key="normal" image="Button Previous"/>
                                                         <connections>
-                                                            <action selector="didTabPlayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yke-no-ifd"/>
-                                                            <action selector="didTabPreBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gfm-kS-caF"/>
+                                                            <action selector="didTabPreBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EIU-Hz-avb"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -93,10 +96,12 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1a-PJ-bs7">
                                                 <rect key="frame" x="127.5" y="0.0" width="45" height="45"/>
+                                                <gestureRecognizers/>
                                                 <state key="normal" image="Play Button"/>
                                                 <state key="selected" image="Button Pause"/>
                                                 <connections>
-                                                    <action selector="didTabPlayBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jOH-HM-HjC"/>
+                                                    <action selector="didTabPlayButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sht-bz-kvH"/>
+                                                    <outletCollection property="gestureRecognizers" destination="Haz-Md-VYc" appends="YES" id="oc2-Se-jcS"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADD-I2-Aq0">
@@ -106,7 +111,7 @@
                                                         <rect key="frame" x="4" y="11.5" width="38" height="22"/>
                                                         <state key="normal" image="Button Next"/>
                                                         <connections>
-                                                            <action selector="didTabNextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hyR-8v-phH"/>
+                                                            <action selector="didTabNextBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCe-O3-Y24"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -185,11 +190,19 @@
                         <outlet property="currentPlayTimeLabel" destination="xzK-qN-bcx" id="yQN-gn-1X0"/>
                         <outlet property="durationPlayTimeBtn" destination="mcP-lo-uMQ" id="vnP-wQ-VZv"/>
                         <outlet property="musicProgress" destination="Raj-ds-Ang" id="wEK-7R-Wm9"/>
+                        <outlet property="playBtn" destination="I1a-PJ-bs7" id="dyj-rY-uGd"/>
                         <outlet property="singerNameLabel" destination="OqV-Fr-z3w" id="bxb-of-jDz"/>
                         <outlet property="titleNameLabel" destination="d6D-tW-LXJ" id="tPG-48-eQk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="B09-dO-1y6"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" id="Haz-Md-VYc">
+                    <connections>
+                        <action selector="didTabLongPress:" destination="BYZ-38-t0r" id="F2m-aA-w0m"/>
+                        <outlet property="delegate" destination="BYZ-38-t0r" id="P8b-2q-YsS"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="364" y="-51.724137931034484"/>
         </scene>
